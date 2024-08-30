@@ -1,0 +1,44 @@
+/* Structure */
+body {
+    background-color: #87DCF8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background-color: #011526;
+    width: 95%;
+    margin: auto;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 0;
+    border-radius: 5px;
+}
+
+/* Navigation */
+a {
+    text-decoration: none;
+    background-color: #87DCF8;
+    color: #011526;
+    padding: 4px;
+    border-radius: 4px;
+    display: block;
+    margin: 5px;
+    width: 100px;
+}
+
+a:hover {
+    background-color: white;
+}
+
+/* Tables */
+
+/* Typography */
+h1 {
+    color: #14B5D9;
+}
+h2 {
+    color: #0477BF;
+}
+body {
+    color: white;
+}
