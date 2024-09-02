@@ -1,44 +1,93 @@
-/* Structure */
+/* General styles */
 body {
-    background-color: #87DCF8;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
 #content {
-    background-color: #011526;
-    width: 95%;
-    margin: auto;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    padding-top: 0;
-    border-radius: 5px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-/* Navigation */
-a {
-    text-decoration: none;
-    background-color: #87DCF8;
-    color: #011526;
-    padding: 4px;
-    border-radius: 4px;
-    display: block;
-    margin: 5px;
-    width: 100px;
+#name {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+    margin-top: 0;
 }
 
-a:hover {
-    background-color: white;
-}
-
-/* Tables */
-
-/* Typography */
 h1 {
-    color: #14B5D9;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
 h2 {
-    color: #0477BF;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 40px;
 }
-body {
-    color: white;
+
+/* Flexbox layout for assignments */
+.assignments-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.assignment {
+    background-color: #e8f0fa;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+    transition: background-color 0.3s ease;
+}
+
+.assignment:hover {
+    background-color: #d0e7ff;
+}
+
+.assignment img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.assignment h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.assignment p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        text-align: center;
+    }
+
+    #name {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .assignments-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .assignment {
+        margin-bottom: 20px;
+    }
 }
