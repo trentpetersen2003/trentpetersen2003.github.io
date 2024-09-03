@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+header {
+    background-color: #ffffcc;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ff99cc;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Updated grid container to enforce correct layout */
+.grid {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.grid > article {
+    background-color: #c2e5e5;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px) !important; /* Force the articles to take up 25% of the width */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.grid > article img {
+    margin-bottom: 10px;
+}
+
+aside {
+    flex: 1;
+    background-color: #ffcccc;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.ideas {
+    background-color: #ffffcc;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ideas article {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ideas article img {
+    flex: 0 0 200px;
+}
+
+footer {
+    background-color: #ffffcc;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Enforce single column layout on mobile screens */
+    .grid {
+        width: 100%;
+        flex-direction: column !important; /* Force column layout */
+        gap: 20px;
+    }
+
+    .grid > article {
+        width: 100% !important; /* Ensure full width on mobile */
+    }
+
+    aside {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .ideas {
+        width: 100%;
+    }
+
+    .ideas article {
+        flex-direction: column;
+        align-items: center;
+    }
+}
