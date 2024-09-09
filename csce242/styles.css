@@ -70,27 +70,6 @@ h2 {
     color: #666;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    h1 {
-        text-align: center;
-    }
-
-    #name {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    }
-
-    .assignments-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .assignment {
-        margin-bottom: 20px;
-    }
-}
 /* Flexbox layout for projects */
 .projects-container {
     display: flex;
@@ -126,6 +105,24 @@ h2 {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+    h1 {
+        text-align: center;
+    }
+
+    #name {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .assignments-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .assignment {
+        margin-bottom: 20px;
+    }
     .projects-container {
         flex-direction: column;
         align-items: center;
