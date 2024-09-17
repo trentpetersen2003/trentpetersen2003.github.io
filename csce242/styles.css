@@ -93,6 +93,12 @@ h2 {
     background-color: #d0e7ff;
 }
 
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
 .project h3 {
     font-size: 18px;
     margin-bottom: 10px;
