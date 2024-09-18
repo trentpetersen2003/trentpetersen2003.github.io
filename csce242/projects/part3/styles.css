@@ -1,0 +1,244 @@
+:root {
+    --primary-color: black;
+    --secondary-color: #999;
+    --background-color: white;
+    --highlight-color: blue;
+    --text-color: black;
+    --gray-placeholder: #d3d3d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--secondary-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+nav a.active {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px 0;
+}
+
+.hero-image-placeholder {
+    background-color: var(--gray-placeholder);
+    border: 2px solid var(--secondary-color);
+    width: 100%;
+    height: 200px; /* Adjust this to take up more space */
+    margin: 0 auto;
+}
+
+.home-text {
+    font-size: 1.2rem; /* Make the text larger */
+    text-align: center;
+    width: 100%;
+    margin: 20px auto 0 auto; /* Add space between the hero image and text */
+    line-height: 1.6;
+}
+
+/* Content Grid (used for other pages) */
+.content-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.card h3 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.card-cuisine {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card-cuisine img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.card-cuisine h3 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Map Search Section */
+.map-search {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.map-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--gray-placeholder);
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+}
+
+.map-placeholder {
+    width: 60%;
+    height: 300px;
+    background-color: var(--gray-placeholder);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.map-search-input {
+    width: 30%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* FAQ section */
+.faq {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.submit-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.submit-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.submit-section button {
+    padding: 10px 20px;
+    background-color: var(--highlight-color);
+    border: none;
+    color: var(--background-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+/* Search section */
+.search-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 200px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
