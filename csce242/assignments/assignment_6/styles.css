@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f3f4f7; /* Soft light gray background */
+    color: #333; /* Darker text for readability */
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #4a90e2; /* Vibrant blue header */
+    padding: 30px;
+    color: white; /* White text in header */
+    box-shadow: none; /* Remove line between header and main content */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #ffe599; /* Light yellow subtitle */
+    margin: 5px 0 15px;
+}
+
+/* Styling for Exercise Navigation */
+.menu-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.menu-items li {
+    margin: 0 10px;
+}
+
+.menu-items a {
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-items a:hover {
+    text-decoration: underline;
+}
+
+.menu-items li:nth-child(2) {
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Dropdown arrow for small screens */
+.dropdown-arrow {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Section Styling */
+.exercise-section {
+    background-color: #fff; /* Clean white background for content sections */
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid #e0e0e0; /* Soft border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#color-slider-section {
+    background-color: #f5a623; /* Orange background for color slider */
+    color: white; /* White text in color slider section */
+}
+
+#color-message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Picture Chooser Styles */
+.picture-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2; /* Blue buttons */
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.picture-buttons button:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+}
+
+#picture-display {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Slider */
+#color-slider {
+    width: 100%;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #888;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#color-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #4a90e2; /* Blue thumb */
+}
+
+#color-slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #4a90e2;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .dropdown-arrow {
+        display: block;
+        margin-left: 10px;
+    }
+
+    .menu-bar {
+        justify-content: space-between;
+    }
+}
