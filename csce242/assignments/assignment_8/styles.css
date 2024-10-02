@@ -1,0 +1,84 @@
+/* Container styles */
+.container {
+    max-width: 800px; /* Reduce the width for a smaller container */
+    margin: 30px auto;
+    text-align: center;
+    background-color: lightcoral; /* Lighter background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+    margin: 0;
+    padding: 10px;
+    color: blue; /* Softer, neutral color */
+    font-size: 2.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    margin: 0;
+    padding: 5px;
+    color: white; /* Softer red */
+    font-size: 1.4em;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Details container styles for title and description */
+.details-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: pink; /* Pale yellow background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.details-container h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: blue; /* Olive green title */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.details-container p {
+    margin: 10px 0 0;
+    color: black;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image container styles */
+.images-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    gap: 15px; /* Space between grid items */
+    background-color: #fafafa; /* Light background for images */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Individual image styles */
+.image-wrapper {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.image-wrapper:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 150px; /* Restrict image height */
+    border-radius: 4px;
+    cursor: pointer;
+}

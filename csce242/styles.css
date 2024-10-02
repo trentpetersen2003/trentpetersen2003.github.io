@@ -31,11 +31,12 @@ h2 {
     margin-bottom: 40px;
 }
 
-/* Flexbox layout for assignments */
+/* Grid layout for assignments */
 .assignments-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create a responsive grid with a minimum box size */
     gap: 20px;
+    justify-items: center; /* Center items within their grid cells */
 }
 
 .assignment {
@@ -43,11 +44,11 @@ h2 {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    flex: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit color from parent */
     transition: background-color 0.3s ease;
+    max-width: 100%; /* Ensure it fits within the grid cell */
 }
 
 .assignment:hover {
@@ -70,11 +71,12 @@ h2 {
     color: #666;
 }
 
-/* Flexbox layout for projects */
+/* Grid layout for projects */
 .projects-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create a responsive grid with a minimum box size */
     gap: 20px;
+    justify-items: center; /* Center items within their grid cells */
 }
 
 .project {
@@ -82,11 +84,11 @@ h2 {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    flex: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-decoration: none; /* Remove underline from links */
     color: inherit; /* Inherit color from parent */
     transition: background-color 0.3s ease;
+    max-width: 100%; /* Ensure it fits within the grid cell */
 }
 
 .project:hover {
