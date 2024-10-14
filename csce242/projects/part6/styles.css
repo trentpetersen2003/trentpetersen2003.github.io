@@ -1,0 +1,310 @@
+:root {
+    /* Color Scheme */
+    --primary-color: #B22222; /* Dark Red */
+    --secondary-color: #F5F5DC; /* Light Beige */
+    --accent-color: #D4AF37; /* Gold */
+    --background-color: #FAF9F6; /* Off-White */
+    --text-color: #333333; /* Dark Gray */
+    --gray-placeholder: #D3D3D3; /* Gray for placeholders */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.logo img {
+    width: 100px;  /* Adjust as needed for proper logo size */
+    height: auto;  /* Ensures the aspect ratio is maintained */
+    border-radius: 50%;  /* Optional: If you want the logo to appear circular */
+    object-fit: cover;   /* Ensures that the image scales nicely inside the logo container */
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0; /* Remove bottom margin */
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--secondary-color);
+    border-top: 2px solid var(--primary-color); /* Top border of nav */
+    border-bottom: 2px solid var(--primary-color); /* Bottom border, touching the nav */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+nav a.active {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Additional content on the homepage */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+nav a.active {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;  /* Set the width for the profile image */
+    height: 40px; /* Set the height for the profile image */
+    border-radius: 50%;  /* This will make the image circular */
+    object-fit: cover;   /* Ensures the image scales nicely inside the container */
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 200px; /* Set height for the hero image */
+    margin-bottom: 40px;
+    overflow: hidden; /* Ensures that no part of the image overflows */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes sure the image covers the area without distortion */
+}
+
+.home-text {
+    font-size: 1.6rem;
+    text-align: center;
+    max-width: 100%;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* Content Grid (used for other pages) */
+.content-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.newsletter-input {
+    padding: 10px;
+    width: 300px;
+    margin-top: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.newsletter-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;  /* Set a fixed height for the images */
+    object-fit: cover;  /* Ensures the image fills the space without distortion */
+    border-radius: 10px; /* Optional: Rounded corners for a modern look */
+}
+
+.card h3 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Specific for cuisine cards */
+.card-cuisine {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.card-cuisine img {
+    width: 100%;
+    height: 200px;  /* Set a fixed height for the images */
+    object-fit: cover;  /* Ensures the image fills the space without distortion */
+    border-radius: 10px; /* Optional: Rounded corners for a modern look */
+}
+
+.card-cuisine h3 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+/* Map Search Section */
+.map-search {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.map-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--gray-placeholder);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.map-placeholder {
+    width: 60%;
+    height: 300px;
+    background-color: var(--gray-placeholder);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.map-search-input {
+    width: 30%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* FAQ section */
+.faq {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.submit-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.submit-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+.submit-section button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--background-color);
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Description section */
+.description {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+/* Search section */
+.search-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-section input {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid var(--primary-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Cocktail Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Random Cocktail Finder</h1>
+    <button onclick="getRandomCocktail()">Get a Random Cocktail</button>
+    <div id="cocktail-card" style="display: none;">
+        <h2 id="cocktail-name"></h2>
+        <img id="cocktail-image" alt="Cocktail Image">
+        <h3>Ingredients</h3>
+        <ul id="cocktail-ingredients"></ul>
+        <h3>Instructions</h3>
+        <p id="cocktail-instructions"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
