@@ -276,59 +276,45 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log("JavaScript is loaded.");
-        // Fetch JSON data
-        fetch('japanese_recipes.json')
-            .then(response => response.json())
-            .then(data => {
-                const recipeContainer = document.getElementById('recipe-container');
+    console.log("Script.js is running.");
 
-                // Loop through each recipe in the data
-                data.forEach(recipe => {
-                    // Create a card element for each recipe
-                    const recipeCard = document.createElement('div');
-                    recipeCard.classList.add('recipe-card');
-                    
-                    // Add recipe image
-                    const recipeImage = document.createElement('img');
-                    recipeImage.src = recipe.img_name;
-                    recipeImage.alt = recipe.name;
-                    recipeCard.appendChild(recipeImage);
+// Fetch JSON data
+fetch('japanese_recipes.json')
+    .then(response => {
+        console.log("Fetch response received:", response);
 
-                    // Add recipe title
-                    const recipeTitle = document.createElement('h3');
-                    recipeTitle.innerText = recipe.name;
-                    recipeCard.appendChild(recipeTitle);
+        if (!response.ok) {
+            throw new Error("Network response was not ok: " + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Data fetched successfully:", data);
+        if (!Array.isArray(data)) {
+            console.error("Error: Data is not an array.");
+            return;
+        }
 
-                    // Add short description
-                    const recipeDescription = document.createElement('p');
-                    recipeDescription.innerText = recipe.description;
-                    recipeCard.appendChild(recipeDescription);
+        const recipeContainer = document.getElementById('recipe-container');
+        if (!recipeContainer) {
+            console.error("Error: Recipe container not found in the DOM.");
+            return;
+        }
 
-                    // Create an ingredients list
-                    const ingredientsList = document.createElement('ul');
-                    ingredientsList.innerHTML = '<strong>Ingredients:</strong>';
-                    recipe.ingredients.forEach(ingredient => {
-                        const listItem = document.createElement('li');
-                        listItem.innerText = ingredient;
-                        ingredientsList.appendChild(listItem);
-                    });
-                    recipeCard.appendChild(ingredientsList);
+        // Loop through each recipe in the data
+        data.forEach(recipe => {
+            console.log("Processing recipe:", recipe);
 
-                    // Add cooking info
-                    const cookingInfo = document.createElement('p');
-                    cookingInfo.innerHTML = `
-                        <strong>Prep Time:</strong> ${recipe.prep_time}<br>
-                        <strong>Cooking Time:</strong> ${recipe.cooking_time}<br>
-                        <strong>Servings:</strong> ${recipe.servings}
-                    `;
-                    recipeCard.appendChild(cookingInfo);
+            // Create a card element for each recipe
+            const recipeCard = document.createElement('div');
+            recipeCard.classList.add('recipe-card');
 
-                    // Add to recipe container
-                    recipeContainer.appendChild(recipeCard);
-                });
-            })
-            .catch(error => console.error('Error fetching the recipes:', error));
-    });
+            const recipeTitle = document.createElement('h3');
+            recipeTitle.innerText = recipe.name;
+            recipeCard.appendChild(recipeTitle);
+
+            recipeContainer.appendChild(recipeCard);
+        });
+    })
+    .catch(error => console.error('Error fetching the recipes:', error)); 
 });
