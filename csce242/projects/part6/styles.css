@@ -1,11 +1,16 @@
 :root {
     /* Color Scheme */
-    --primary-color: #B22222; /* Dark Red */
-    --secondary-color: #F5F5DC; /* Light Beige */
-    --accent-color: #D4AF37; /* Gold */
-    --background-color: #FAF9F6; /* Off-White */
-    --text-color: #333333; /* Dark Gray */
-    --gray-placeholder: #D3D3D3; /* Gray for placeholders */
+    --primary-color: #B22222;
+    --secondary-color: #F5F5DC;
+    --accent-color: #D4AF37;
+    --background-color: #F0F0F0;
+    --text-color: #333333;
+    --gray-placeholder: #D3D3D3;
+    --hover-color: #D4AF37;
+    --card-border-color: #E0E0E0;
+    --modal-bg: rgba(0, 0, 0, 0.8);
+    --modal-content-bg: #F5F5DC;
+    --modal-text-color: #333333;
 }
 
 * {
@@ -19,16 +24,19 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    line-height: 1.6;
 }
 
 /* Header styles */
 header {
     text-align: center;
     padding: 20px;
-    background-color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    position: relative;
 }
 
 .header-content {
@@ -40,62 +48,63 @@ header {
 }
 
 h1 {
-    text-align: center;
-    margin: 0 auto;
-    font-size: 2rem;
-    color: var(--primary-color);
+    font-size: 2.5rem;
+    color: var(--secondary-color);
 }
 
 .logo img {
-    width: 100px;  /* Adjust as needed for proper logo size */
-    height: auto;  /* Ensures the aspect ratio is maintained */
-    border-radius: 50%;  /* Optional: If you want the logo to appear circular */
-    object-fit: cover;   /* Ensures that the image scales nicely inside the logo container */
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar styles */
+nav {
+    position: relative;
 }
 
 nav ul {
     list-style: none;
-    padding: 10px 0; /* Remove bottom margin */
-    margin: 0;
     display: flex;
     justify-content: space-evenly;
     background-color: var(--secondary-color);
-    border-top: 2px solid var(--primary-color); /* Top border of nav */
-    border-bottom: 2px solid var(--primary-color); /* Bottom border, touching the nav */
+    padding: 10px 0;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     text-decoration: none;
     color: var(--text-color);
     padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--hover-color);
+    color: var(--background-color);
+    border-radius: 5px;
 }
 
 nav a.active {
-    color: var(--accent-color);
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
-/* Additional content on the homepage */
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.gallery img {
-    width: 30%;
-    border-radius: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: 10px 20px;
-}
-
-nav a.active {
-    color: var(--accent-color);
-    text-decoration: underline;
+/* Toggle Button for Navbar */
+.toggle-btn {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--background-color);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .profile {
@@ -104,10 +113,12 @@ nav a.active {
 }
 
 .profile img {
-    width: 40px;  /* Set the width for the profile image */
-    height: 40px; /* Set the height for the profile image */
-    border-radius: 50%;  /* This will make the image circular */
-    object-fit: cover;   /* Ensures the image scales nicely inside the container */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero section */
@@ -115,36 +126,226 @@ nav a.active {
     text-align: center;
     position: relative;
     width: 100%;
-    height: 200px; /* Set height for the hero image */
+    height: 300px;
     margin-bottom: 40px;
-    overflow: hidden; /* Ensures that no part of the image overflows */
+    overflow: hidden;
+    border-bottom: 5px solid var(--primary-color);
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Makes sure the image covers the area without distortion */
+    object-fit: cover;
+    filter: brightness(0.9);
 }
 
 .home-text {
     font-size: 1.6rem;
     text-align: center;
-    max-width: 100%;
+    max-width: 90%;
     margin: 20px auto;
-    line-height: 1.6;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Content Grid (used for other pages) */
 .content-grid {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.card, .card-cuisine {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover, .card-cuisine:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img, .card-cuisine img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--card-border-color);
+}
+
+.card h3, .card-cuisine h3 {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-bg);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--modal-content-bg);
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--modal-text-color);
+    position: relative;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--primary-color);
+}
+
+/* Map Search Section */
+.map-search {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.map-search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder {
+    width: 60%;
+    height: 300px;
+    background-color: var(--gray-placeholder);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-search-input {
+    width: 30%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* Recipe Book Section */
+.recipe-book {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-book h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.recipe-book ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recipe-book ul li {
+    background-color: var(--background-color);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.recipe-book ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-book ul li {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* JSON File */
+#recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.recipe-card {
+    background-color: #f5f5dc; /* Light Beige */
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 /* Newsletter */
 .newsletter {
     text-align: center;
     margin: 40px 0;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .newsletter-input {
@@ -163,109 +364,39 @@ nav a.active {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.card {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    width: 30%;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid var(--primary-color);
+.newsletter-btn:hover {
+    background-color: var(--hover-color);
 }
 
-.card img {
-    width: 100%;
-    height: 200px;  /* Set a fixed height for the images */
-    object-fit: cover;  /* Ensures the image fills the space without distortion */
-    border-radius: 10px; /* Optional: Rounded corners for a modern look */
-}
-
-.card h3 {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-/* Specific for cuisine cards */
-.card-cuisine {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    width: 40%;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid var(--primary-color);
-}
-
-.card-cuisine img {
-    width: 100%;
-    height: 200px;  /* Set a fixed height for the images */
-    object-fit: cover;  /* Ensures the image fills the space without distortion */
-    border-radius: 10px; /* Optional: Rounded corners for a modern look */
-}
-
-.card-cuisine h3 {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-/* Map Search Section */
-.map-search {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.map-search-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--gray-placeholder);
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-}
-
-.map-placeholder {
-    width: 60%;
-    height: 300px;
-    background-color: var(--gray-placeholder);
-    border: 1px solid var(--secondary-color);
-    border-radius: 5px;
-}
-
-.map-search-input {
-    width: 30%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    margin-left: 20px;
-}
-
-/* FAQ section */
+/* FAQ Section */
 .faq {
     background-color: var(--secondary-color);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Submit Section */
 .submit-section {
     padding: 20px;
     text-align: center;
+    margin: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .submit-section textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-top: 10px;
     border: 2px solid var(--primary-color);
+    border-radius: 5px;
 }
 
 .submit-section button {
@@ -276,16 +407,14 @@ nav a.active {
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Description section */
-.description {
-    text-align: center;
-    font-size: 1.2rem;
-    width: 100%;
+.submit-section button:hover {
+    background-color: var(--hover-color);
 }
 
-/* Search section */
+/* Search Section */
 .search-section {
     text-align: center;
     margin: 20px 0;
@@ -295,16 +424,44 @@ nav a.active {
     padding: 10px;
     width: 200px;
     border: 2px solid var(--primary-color);
+    border-radius: 5px;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .content-grid {
         flex-direction: column;
         gap: 20px;
     }
 
-    .card {
+    .card, .card-cuisine {
         width: 100%;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--secondary-color);
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .toggle-btn {
+        display: block;
     }
 }
