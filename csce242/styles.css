@@ -71,6 +71,18 @@ h2 {
     color: #666;
 }
 
+.assignment-link {
+    display: block; 
+    margin-top: 10px; 
+    color: #1a73e8; 
+    text-decoration: none; 
+}
+
+.assignment-link:hover {
+    text-decoration: underline;
+}
+
+
 /* Grid layout for projects */
 .projects-container {
     display: grid;
