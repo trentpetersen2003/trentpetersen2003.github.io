@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Japan - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/cherry_blossom.jpg" alt="Website Logo">
+            </div>
+            <h1>Discover Japan</h1>
+            <div class="profile">
+                <img src="images/profile_icon.jpg" alt="User Profile Image">
+                <span>tpetersen</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="cultural-experiences.html">Cultural Experiences</a></li>
+                <li><a href="cuisine.html">Cuisine</a></li>
+                <li><a href="travel-tips.html">Travel Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <img src="images/japan_landscape.jpg" alt="Beautiful view of Japan landscape" class="hero-image">
+        </section>
+            <p class="home-text">
+                Japan is a country rich in culture, history, and natural beauty, making it 
+                a top destination for travelers around the world. Whether you're interested 
+                in exploring the bustling streets of Tokyo, relaxing in the serene gardens 
+                of Kyoto, or experiencing the traditional way of life in rural villages, Japan 
+                has something for everyone. "Discover Japan" will guide you through the best 
+                destinations, cultural experiences, and local cuisine, ensuring that you make 
+                the most of your trip.
+            </p>
+            <section class="contact-section">
+                <h2>Contact Me</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="dd4441a0-cf80-4184-a816-a40499c58480">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+            
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>            
+    </main>   
+    <script src="script.js"></script>
+    <script src="contactme.js"></script>
+</body>
+</html>

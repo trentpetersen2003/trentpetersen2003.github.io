@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval';">
+    <title>Discover Japan - Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/cherry_blossom.jpg" alt="Logo">
+            </div>
+            <h1>Discover Japan</h1>
+            <div class="profile">
+                <img src="images/profile_icon.jpg" alt="Profile">
+                <span>tpetersen</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="cultural-experiences.html">Cultural Experiences</a></li>
+                <li><a href="cuisine.html" class="active">Cuisine</a></li>
+                <li><a href="travel-tips.html">Travel Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <img src="images/cuisine.jpg" alt="Cuisine image" class="hero-image">
+        </section>
+        <p class="home-text">
+            Japan's cuisine is world-renowned for its freshness, flavor, and artistry. 
+            From sushi and ramen to tempura and sashimi, each dish offers a unique taste
+            of Japan's culinary heritage. Exploring local cuisine is a must for any visitor
+            looking to experience the true flavors of Japan.
+        </p>
+
+        <section class="content-grid">
+            <div class="card-cuisine">
+                <img src="images/restaurant.jpg" alt="Popular Restaurants">
+                <h3>Popular Restaurants</h3>
+            </div>
+            <div class="card-cuisine">
+                <img src="images/sushi.jpg" alt="Famous Dishes">
+                <h3>Famous Dishes</h3>
+            </div>
+        </section>
+
+        <section class="recipe-book">
+            <h2>Japanese Recipe Book</h2>
+            <ul>
+                <li class="recipe-book">Sushi Rolls - Learn how to make traditional sushi at home.</li>
+                <li class="recipe-book">Ramen - Try this hearty and flavorful Japanese noodle soup.</li>
+                <li class="recipe-book">Tempura - Light and crispy battered vegetables and seafood.</li>
+                <li class="recipe-book">Miso Soup - A simple and comforting staple in Japanese cuisine.</li>
+                <li class="recipe-book">Okonomiyaki - A savory Japanese pancake with various toppings.</li>
+            </ul>
+        </section>
+    </main>
+    <div id="recipe-container"></div>
+    <script>
+        console.log("Inline JavaScript is running.");
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
